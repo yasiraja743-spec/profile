@@ -85,9 +85,21 @@
 
     try {
       const url = `${API_BASE}?question=${encodeURIComponent(question)}`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('bad response');
-      const data = await res.json();
+      let data;
+
+      try {
+        // direct call first
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('bad status');
+        data = await res.json();
+      } catch (directErr) {
+        // direct call blocked (usually CORS) — retry through a proxy
+        const proxied = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+        const res2 = await fetch(proxied);
+        if (!res2.ok) throw new Error('bad status via proxy');
+        data = await res2.json();
+      }
+
       removeTyping();
 
       if (data && data.status && data.result) {
