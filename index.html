@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyro — Dashboard</title>
+<meta name="description" content="Portofolio Kyro, full stack developer dari Jambi. Bot Telegram, aplikasi AI, dan proyek web.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!-- ============ BOOT SEQUENCE ============ -->
+<div class="boot-screen" id="bootScreen">
+  <div class="boot-terminal">
+    <p class="boot-line" style="animation-delay:.05s">&gt; booting <b>kyro.sys</b> ...</p>
+    <p class="boot-line" style="animation-delay:.35s">&gt; loading modules <span class="ok">[ok]</span></p>
+    <p class="boot-line" style="animation-delay:.65s">&gt; connecting to dashboard <span class="ok">[ok]</span></p>
+    <h1 class="boot-title" style="animation-delay:1.0s">welcome to <span>Kyro</span> portofolio<span class="boot-cursor"></span></h1>
+    <p class="boot-sub" style="animation-delay:1.4s">mempersiapkan tampilan, mohon tunggu sebentar...</p>
+  </div>
+</div>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <div class="topbar-brand">KYRO<span class="dot">.</span>SYS</div>
+  <div class="topbar-status"><span class="status-dot"></span>ONLINE</div>
+</header>
+
+<!-- ============ SIDE MENU ============ -->
+<nav class="side-menu" id="sideMenu" aria-hidden="true">
+  <button class="nav-close" id="navClose" aria-label="Tutup menu">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="menu-label">navigasi</div>
+  <ul>
+    <li><a href="/" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+      Dashboard
+    </a></li>
+    <li><a href="/project" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg>
+      Project
+    </a></li>
+    <li><a href="/chat" class="nav-link">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Chat AI
+    </a></li>
+  </ul>
+  <div class="side-menu-foot">
+    status: <span>online</span><br>
+    asal: jambi, indonesia
+  </div>
+</nav>
+<div class="overlay" id="navOverlay"></div>
+
+<!-- ============ HERO / WELCOME ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-greet">&gt; session started</div>
+    <h1>Selamat datang di dashboard <em>Kyro</em>.</h1>
+    <p>Ini adalah ruang kerja digital saya — tempat profil, skill, dan proyek yang sedang saya bangun terkumpul dalam satu panel. Scroll ke bawah untuk lihat semuanya.</p>
+    <div class="hero-stats">
+      <span class="stat-chip"><span class="dot"></span>role: <b>full stack developer</b></span>
+      <span class="stat-chip"><span class="dot"></span>base: <b>jambi, indonesia</b></span>
+      <span class="stat-chip"><span class="dot"></span>goal: <b>ceo</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROFILE ============ -->
+<section id="profile">
+  <div class="wrap reveal">
+    <div class="module-head">
+      <div>
+        <div class="eyebrow">profile.sys</div>
+        <h2 class="module-title">Informasi Saya</h2>
+      </div>
+      <span class="module-tag">01 / identitas</span>
+    </div>
+
+    <div class="profile-grid">
+      <div class="profile-cell">
+        <div class="k">nama</div>
+        <div class="v">Kyro</div>
+      </div>
+      <div class="profile-cell">
+        <div class="k">asal</div>
+        <div class="v">Jambi</div>
+      </div>
+      <div class="profile-cell">
+        <div class="k">role</div>
+        <div class="v">Full Stack Developer</div>
+      </div>
+      <div class="profile-cell">
+        <div class="k">cita-cita</div>
+        <div class="v accent">CEO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap reveal">
+    <div class="module-head">
+      <div>
+        <div class="eyebrow">skills.sys</div>
+        <h2 class="module-title">Skill</h2>
+      </div>
+      <span class="module-tag">diperbarui berkala</span>
+    </div>
+
+    <div class="panel skills-panel">
+      <div class="skill-row" data-value="83">
+        <div class="skill-name">HTML</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="70">
+        <div class="skill-name">CSS</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="65">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="70">
+        <div class="skill-name">Node.js</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="75">
+        <div class="skill-name">REST API</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="55">
+        <div class="skill-name">Database / SQL</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="70">
+        <div class="skill-name">Git / GitHub</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="70">
+        <div class="skill-name">Vercel / Deployment</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="65">
+        <div class="skill-name">Linux / VPS</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="55">
+        <div class="skill-name">Nginx / DNS / Cloudflare</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="45">
+        <div class="skill-name">Docker</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="45">
+        <div class="skill-name">Security</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+      <div class="skill-row" data-value="40">
+        <div class="skill-name">System Design</div>
+        <div class="skill-track"><div class="skill-fill"></div></div>
+        <div class="skill-val">0%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap reveal">
+    <div class="module-head">
+      <div>
+        <div class="eyebrow">contact.sys</div>
+        <h2 class="module-title">Hubungi Saya</h2>
+      </div>
+      <span class="module-tag">balasan via email</span>
+    </div>
+
+    <div class="panel" style="padding:30px;">
+      <p class="contact-note">Isi form ini dan pesan akan dikirim langsung ke email saya.</p>
+
+      <form id="contactForm" class="contact-grid" action="https://formsubmit.co/ajax/yasiraja743@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Pesan baru dari Kyro Portfolio">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="fName">nama</label>
+            <input type="text" id="fName" name="nama" placeholder="Nama kamu" required>
+          </div>
+          <div class="field">
+            <label for="fEmail">email</label>
+            <input type="email" id="fEmail" name="email" placeholder="kamu@email.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fSubject">subjek</label>
+          <input type="text" id="fSubject" name="subjek" placeholder="Tentang apa pesan ini" required>
+        </div>
+
+        <div class="field">
+          <label for="fMessage">pesan</label>
+          <textarea id="fMessage" name="pesan" placeholder="Tulis pesan kamu di sini..." required></textarea>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <button type="submit" class="btn btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send
+          </button>
+          <span class="form-status" id="formStatus"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">© 2026 Kyro <span>.</span> built from scratch, no template.</div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
