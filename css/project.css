@@ -48,6 +48,7 @@
 .project-card.c-web{ --card-accent: #4FD9C5; }
 .project-card.c-tg{ --card-accent: #F2A93B; }
 .project-card.c-tg2{ --card-accent: #8EA6FF; }
+.project-card.c-tg3{ --card-accent : red; }
 
 .project-main{ min-width: 0; }
 .project-kicker{
